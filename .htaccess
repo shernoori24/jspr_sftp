@@ -1,0 +1,16 @@
+RewriteEngine on 
+	RewriteBase /
+    RewriteCond %{SCRIPT_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_URI} !(\.png|\.jpg|\.gif|\.jpeg|\.zip|\.pdf|\.css|\.svg|\.js|\.md\.xml|\.json)$
+
+RewriteRule ^(.*)$ index.php?route=$1 [QSA,L]
+
+
+#require authentification pour access au site
+AuthUserFile "/homepages/33/d4298910916/htdocs/jspr/.htpasswd"  
+AuthType Basic
+AuthName "admin"
+Require valid-user
+
+

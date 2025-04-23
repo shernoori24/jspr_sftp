@@ -1,0 +1,20 @@
+{
+    "name": "alaji/jspr",
+    "autoload": {
+        "psr-4": {
+            "Alaji\\Jspr\\": "src/",
+            "Models\\": "src/models/",
+            "Controllers\\": "src/controllers/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Sheraqa Noori",
+            "email": "shernoori24@gmail.com"
+        }
+    ],
+    "require": {
+        "vlucas/phpdotenv": "^5.6",
+        "phpmailer/phpmailer": "^6.9"
+    }
+}

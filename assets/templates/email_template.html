@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email J'SPR 08</title>
+    <style>
+        /* Style de base pour le corps de l'email */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Conteneur principal de l'email */
+        .email-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Header avec le texte du logo */
+        .header {
+            background-color: #fff;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        .header h1 {
+            font-size: 24px;
+            color: #333;
+            margin: 0;
+        }
+
+        /* Contenu principal de l'email */
+        .content {
+            padding: 20px;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Section pour l'image responsive */
+        .image-section {
+            padding: 20px;
+            text-align: center;
+        }
+        .responsive-image {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            border-radius: 10px;
+        }
+
+        /* Footer avec la navbar et les liens sociaux */
+        .footer {
+            background-color: #f8f9fa;
+            padding: 20px;
+            text-align: center;
+            font-size: 12px;
+            color: #666;
+            border-top: 1px solid #e0e0e0;
+        }
+        .footer .nav {
+            margin-bottom: 15px;
+        }
+        .footer .nav a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            margin: 0 10px;
+        }
+        .footer .social-icons {
+            color: #444;
+            margin-top: 10px;
+        }
+        .footer .social-icons a {
+            display: inline-block;
+            margin: 0 5px;
+        }
+        .footer .unsubscribe-link {
+            margin-top: 15px;
+            font-size: 12px;
+        }
+        .footer .unsubscribe-link a {
+            color: #666;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <table class="email-container" cellpadding="0" cellspacing="0" width="100%">
+        <!-- Header avec le texte du logo -->
+        <tr>
+            <td class="header">
+                <h1>J'SPR 08</h1>
+            </td>
+        </tr>
+
+        <!-- Contenu principal de l'email -->
+        <tr>
+            <td class="content">
+                {{ content }} <!-- Variable pour le contenu dynamique -->
+            </td>
+        </tr>
+
+        <!-- Section pour l'image responsive -->
+        <tr>
+            <td class="image-section">
+                {{ image_section }} <!-- Variable pour l'image dynamique -->
+            </td>
+        </tr>
+        <tr>
+            <td class="image-section">
+                <!-- Section pour les pièces jointes -->
+                {{ attachments_section }} <!-- Variable pour dynamique -->
+            </td>
+        </tr>
+
+        <!-- Footer avec la navbar et les liens sociaux -->
+        <tr>
+            <td class="footer">
+                <div class="nav">
+                    <a href="http://localhost/projets/jspr/accueil" target="_blank">Accueil</a>
+                    <a href="http://localhost/projets/jspr/evennements" target="_blank">Événements</a>
+                    <a href="http://localhost/projets/jspr/journal" target="_blank">Journal</a>
+                    <a href="http://localhost/projets/jspr/#contact" target="_blank">Contact</a>
+                </div>
+                <div class="social-icons">
+                    <a href="https://facebook.com/people/JSPR-08/61555467238997/?rdid=wwFbx1X0gP3zAZ1X" target="_blank">Facebook</a>
+                    <a href="https://instagram.com/jspr_08/?igsh=MWJ6bzFxOGd1NmYzZw%3D%3D" target="_blank">Instagram</a>
+                    <a href="#" target="_blank">LinkedIn</a>
+                </div>
+                <div class="unsubscribe-link">
+                    <p>Si vous ne souhaitez plus recevoir nos emails, cliquez ici : <a href="{{ unsubscribe_link }}">Se désabonner</a></p>
+                </div>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
