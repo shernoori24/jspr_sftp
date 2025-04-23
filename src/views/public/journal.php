@@ -1,7 +1,10 @@
 <?php
+
+echo '<br>';
 var_dump($_SESSION['sher']);
 echo '<br>';
 var_dump($_SESSION);
+echo '<br>';
  // Include the header section of the website
  include './src/views/includes/header.php'; 
 // Inclusion du contrôleur du journal

@@ -1,11 +1,15 @@
  <?php
-require_once 'init.php';
+require 'vendor/autoload.php';
+require 'init.php';
+ 
+ // Votre routing...
+// require __DIR__.'/init.php';
 //  ini_set('display_errors', 1);
 //  ini_set('display_startup_errors', 1);
 //  error_reporting(E_ALL);
 
  // Include the Composer autoloader to use installed libraries
-    require_once "./vendor/autoload.php";
+   //  require_once "./vendor/autoload.php";
 
  // Initialize the Dotenv library to load environment variables
     $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
@@ -22,4 +26,3 @@ require_once 'init.php';
 
   // Include the routing logic to handle requests
     include "./routeur.php" ;
-    ob_end_flush(); // vide le buffer et envoie tout au navigateur
